@@ -12,7 +12,7 @@ docker run -d --name mongodb --network goals-net --rm -p 27017:27017 -v /Users/s
 docker build -t goals-node .
 
 # run backend container
-docker run --name goals-backend --network goals-net -d --rm -p 80:80 -v /Users/stevewarren/Projects/Udemy/udemy-docker-kubernetes/section-05/multi-02-finished/backend:/app goals-node 
+docker run --name goals-backend --network goals-net --rm -p 80:80 goals-node 
 
 # build frontend image
 docker build -t goals-react .
