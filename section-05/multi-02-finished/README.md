@@ -18,5 +18,5 @@ docker run --name goals-backend --network goals-net --rm -p 80:80 -v /app/node_m
 docker build -t goals-react .
 
 # run frontend container
-docker run --name goals-frontend --network goals-net -d -it --rm -p 3000:3000 -v /Users/stevewarren/Projects/Udemy/udemy-docker-kubernetes/section-05/multi-02-finished/frontend/src:/app/src goals-react 
+docker run --name goals-frontend --network goals-net -it --rm -p 3000:3000 -v /Users/stevewarren/Projects/Udemy/udemy-docker-kubernetes/section-05/multi-02-finished/frontend/src:/app/src goals-react 
 
